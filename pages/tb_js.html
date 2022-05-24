@@ -83,7 +83,7 @@
 
 <button onclick="func_ej3()">Ejecutar</button>
 
-<label for="ej3_resultado">Resultado</label>
+<label for="ej3_resultado">Resultadoo</label>
 <input type="text" id="ej3_resultado" >
 
 <script>
@@ -109,14 +109,21 @@
 <label for="ej4_grados_c">Grados centigrados</label>
 <input type="number" id="ej4_grados_c">
 
-<button onclick="func_4()">Convertir</button>
+<button onclick="func_ej4()">Convertir</button>
 
 <label for="ej4_grados_C">Grados Celsius</label>
 <input type="number" id="ej4_grados_C">
 
+<script>
+
+    function func_ej4(){
+
+        let ej4
 
 
-
+    }
+    
+</script>
 
 
 <h4>EJERCICIO 5</h4>
@@ -124,10 +131,23 @@
 <label for="ej5_palabra">Palabra</label>
 <input type="text" id="ej5_palabra">
 
-<button onclick="func_5">Calcular</button>
+<button onclick="func_ej5">Calcular</button>
 
 <label for="ej5_letras">Cantidad de letras</label>
 <input type="number" id="ej5_letras">
+
+<script>
+
+    function func_ej5(){
+
+        let ej5_palabra= document.getElementById('ej5_palabra').value
+        
+        ej5_letras= ej5_palabra.length; 
+
+        document.getElementById('ej5_letras').value= ej5_letras
+
+    }
+</script>
 
 <h4>EJERCICIO 6</h4>
 
@@ -143,14 +163,16 @@
 
     function func_6(){
 
-     let ej6_num= parseFloat (document.getElementById('ej6_num').value);
+     let ej6_num= document.getElementById('ej6_num').value
 
-        if (ej6_num % 2 == 0){
-            document.getElementById('ej6_par').value= "El numero es par"
-        }
+        document.getElementById('ej6_num').value
 
-        if (ej6_num % 2 != 0){
-            document.getElementById('ej6_par').value= "El numero no es par"
+        if(ej6_num % 2 == 0){
+            document.getElementById('ej6_par').value= "El numero es par";
+
+        }else{
+
+            document.getElementById('ej6_par').value= "El numero es impar";
         }
 
     }
