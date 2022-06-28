@@ -256,13 +256,42 @@ function func_ej5() {
 
 <h4>EJERCICIO 8</h4>
 
-<label for="ej8_num">Ingrese un número</label>
-<input type="text" id="ej8_num"> 
+<label for= "ej8_n1">Ingrese un número</label>
+<input type="number" id="ej8_n1">
 
-<button onclick="func_ej8">Calcular</button>
+<button onclick="func_ej8()">Calcular números primos</button>
+   
+<label for="ej8_r1">Mostrar</label>
+<input type="number" id="ej8_r1">
 
-<label for="ej8_num_primo">Números primos</label>
-<input type="text" id="ej8_num_primo">
+<script>
+
+function func_ej8(){
+
+let n1= parseInt(document.getElementById('ej8_n1').value);
+
+var primos = []
+for (let index = 0; index <= n1; index++) {
+
+if (esPrimo(index)) {
+primos.push(index)
+}
+
+}
+alert (primos.toString())
+}
+
+function esPrimo(numero) 
+
+for (var i = 2; i < numero; i++) {
+
+  if (numero % i === 0) {
+    return false;
+  }
+
+}
+
+</script>
 
 <H4>EJERCICIO 9</H4>
 
