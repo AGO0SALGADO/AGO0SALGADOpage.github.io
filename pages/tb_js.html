@@ -145,9 +145,9 @@
 <label for= "ej5_palabra">Ingresa una palabra</label>
  <input type="text" id="ej5_palabra">
 
- <button onclick="func_ej5(ej5_palabra)">Calcular</button>
+ <button onclick="func_ej5(ej5_palabra)">Calcular número de letras</button>
 
- <label for= "ej5_result">:</label>
+ <label for= "ej5_result"></label>
  <input type="text" id="ej5_result">
 
 <script>
@@ -257,21 +257,18 @@ function func_ej5() {
 <h4>EJERCICIO 8</h4>
 
 <label for= "ej8_n1">Ingrese un número</label>
-<input type="number" id="ej8_n1">
-
+<input type="number" id="ej8_n1"> 
 <button onclick="func_ej8()">Calcular números primos</button>
-   
-<label for="ej8_r1">Mostrar</label>
-<input type="number" id="ej8_r1">
 
 <script>
 
 function func_ej8(){
 
-let n1= parseInt(document.getElementById('ej8_n1').value);
+let num1= parseInt(document.getElementById('ej8_n1').value);
+
 
 var primos = []
-for (let index = 0; index <= n1; index++) {
+for (let index = 0; index <= num1; index++) {
 
 if (esPrimo(index)) {
 primos.push(index)
@@ -281,7 +278,7 @@ primos.push(index)
 alert (primos.toString())
 }
 
-function esPrimo(numero) 
+function esPrimo(numero) {
 
 for (var i = 2; i < numero; i++) {
 
@@ -289,6 +286,8 @@ for (var i = 2; i < numero; i++) {
     return false;
   }
 
+}
+return numero !== 1;
 }
 
 </script>
@@ -370,8 +369,6 @@ for (var i = 2; i < numero; i++) {
 </script>
           
 <script> src="tpjs.html" </script>
-
-
 
 
 </body>
